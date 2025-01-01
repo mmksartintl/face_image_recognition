@@ -37,7 +37,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
 
     # Display the original image
-    #st.image(image, caption="Original Image", use_container_width=True)
+    #st.image(image, caption="Original Image", use_container_width=False)
 
     try:
         # Detect faces
@@ -47,7 +47,7 @@ if uploaded_file is not None:
         st.image(
             image_with_faces,
             caption=f"Detected Faces: {face_count}",
-            use_container_width=True,
+            use_container_width=False,
         )
         print(uploaded_file)
         if face_count == 0:
